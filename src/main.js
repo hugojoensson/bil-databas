@@ -1,11 +1,11 @@
 import mysql from "mysql2/promise";
-
+import config from "./config.json";
 
 async function main() {
   const db = await mysql.createConnection({
     host     : 'localhost',
     user     : 'admin',
-    password : 'Log12',
-    database : 'DB_NAME'
+    password : config.password,
+    database : 'bil-databas'
   });
 }
